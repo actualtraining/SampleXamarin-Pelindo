@@ -25,16 +25,12 @@ namespace XamarinAppSample
                     Keterangan="Xamarin for Android digunakan jika anda menginginkan tampilan yang sangat flexible menggunakan native xml android"},
                 new Berita {Judul="Xamarin Forms",Keterangan="Xamarin Forms digunakan untuk membuat aplikasi dengan 100% code sharing di C#"}
             };
-
             listBerita.ItemsSource = lstBerita;
-
             listBerita.ItemTapped += (object sender, ItemTappedEventArgs e) =>
             {
                 Berita currBerita = e.Item as Berita;
                 DisplayAlert("Keterangan", "Judul " + currBerita.Judul, "OK");
             };
         }
-
-        
     }
 }
