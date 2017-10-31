@@ -17,11 +17,15 @@ namespace XamarinAppSample
 
             //sample picker
             var options = new List<string> { "Satu", "Dua", "Tiga", "Empat", "Lima" };
-           
             foreach(var option in options)
             {
                 picker.Items.Add(option);
             }
+
+            picker.SelectedIndexChanged += (sender, args) =>
+            {
+                DisplayAlert("Keterangan","Anda memilih " + picker.Items[picker.SelectedIndex],"OK");
+            };
         }
 
         private void BtnAdd_Clicked(object sender, EventArgs e)
