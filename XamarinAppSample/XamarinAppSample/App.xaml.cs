@@ -13,7 +13,7 @@ namespace XamarinAppSample
         {
             InitializeComponent();
 
-            MainPage = new SampleGridLayout();
+            MainPage = new ListBerita();
         }
 
         protected override void OnStart()
