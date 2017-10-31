@@ -35,6 +35,14 @@ namespace XamarinAppSample
 
             timePicker.PropertyChanged += TimePicker_PropertyChanged;
             stepper.ValueChanged += Stepper_ValueChanged;
+
+            switcher.Toggled += Switcher_Toggled;
+        }
+
+        private void Switcher_Toggled(object sender, ToggledEventArgs e)
+        {
+            eventValue.Text = string.Format("Nilai switch : {0}", e.Value);
+            pageValue.Text = switcher.IsToggled.ToString();
         }
 
         private void Stepper_ValueChanged(object sender, ValueChangedEventArgs e)
