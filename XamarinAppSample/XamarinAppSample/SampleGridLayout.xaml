@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppSample.SampleGridLayout">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nama Lengkap :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan nama lengkap" Grid.Column="1" Grid.Row="0" Margin="0,0,20,0" />
+                    <Label Text="Email :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan email anda" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0" />
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                        <Button  Text="Save" />
+                        <Button  Text="Reset" />
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nama Lengkap :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan nama lengkap" Grid.Column="1" Grid.Row="0" Margin="0,0,20,0" />
+                    <Label Text="Email :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan email anda" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0" />
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                        <Button  Text="Save" />
+                        <Button  Text="Reset" />
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nama Lengkap :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan nama lengkap" Grid.Column="1" Grid.Row="0" Margin="0,0,20,0" />
+                    <Label Text="Email :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan email anda" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0" />
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                        <Button  Text="Save" />
+                        <Button  Text="Reset" />
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nama Lengkap :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan nama lengkap" Grid.Column="1" Grid.Row="0" Margin="0,0,20,0" />
+                    <Label Text="Email :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan email anda" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0" />
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                        <Button  Text="Save" />
+                        <Button  Text="Reset" />
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nama Lengkap :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="0" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan nama lengkap" Grid.Column="1" Grid.Row="0" Margin="0,0,20,0" />
+                    <Label Text="Email :" FontSize="Medium" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" 
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="End" />
+                    <Entry Placeholder="masukan email anda" Grid.Column="1" Grid.Row="1" Margin="0,0,20,0" />
+                    <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                        <Button  Text="Save" />
+                        <Button  Text="Reset" />
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
