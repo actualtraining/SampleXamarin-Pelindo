@@ -9,6 +9,7 @@
             <StackLayout Orientation="Horizontal">
                 <Entry x:Name="txtLanguage" WidthRequest="200" />
                 <Button x:Name="btnShowAction" Text="Show Action" />
+                <Button x:Name="btnCekUser" Text="Cek User" Clicked="btnCekUser_Clicked" />
             </StackLayout>
         </StackLayout>
     </ContentPage>

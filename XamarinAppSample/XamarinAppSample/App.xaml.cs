@@ -14,10 +14,12 @@ namespace XamarinAppSample
             InitializeComponent();
 
             //global
-            Application.Current.Properties["username"] = "anonymous";
+            
+                //Application.Current.Properties["username"] = "anonymous";
 
+            MainPage = new AlertTabbedPage();
             //MainPage = new NavigationPage(new MainPage());
-            MainPage = new NavigationPage(new KirimDataPage());
+            //MainPage = new NavigationPage(new KirimDataPage());
         }
 
         protected override void OnStart()

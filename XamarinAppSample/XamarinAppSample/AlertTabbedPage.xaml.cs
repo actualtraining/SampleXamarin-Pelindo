@@ -15,7 +15,6 @@ namespace XamarinAppSample
         public AlertTabbedPage ()
         {
             InitializeComponent();
-
             btnShowAction.Clicked += BtnShowAction_Clicked;
         }
 
@@ -23,6 +22,12 @@ namespace XamarinAppSample
         {
             String strAction = await DisplayActionSheet("Pilihan", "Cancel", null, "C#", "Java", "PHP", "Phyton", "Swift");
             txtLanguage.Text = strAction;
+        }
+
+        private void btnCekUser_Clicked(object sender, EventArgs e)
+        {
+            //DisplayAlert("Username", "Username anda : " + Application.Current.Properties["username"].ToString(), "OK");
+            Application.Current.Properties["username"] = "erick";
         }
     }
 }

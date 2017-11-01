@@ -51,6 +51,7 @@
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="btnListBerita" Text="List Berita" StyleClass="Primary" />
                 <Button x:Name="btnMain" Text="Main Page" />
+                <Button x:Name="btnShowUser" Text="Show User" Clicked="btnShowUser_Clicked" />
             </StackLayout>
         </StackLayout>
         

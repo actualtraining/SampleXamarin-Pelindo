@@ -49,5 +49,10 @@ namespace XamarinAppSample
         {
             Navigation.PushAsync(new ListBerita());
         }
+
+        private void btnShowUser_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Username", Application.Current.Properties["username"].ToString(), "OK");
+        }
     }
 }
