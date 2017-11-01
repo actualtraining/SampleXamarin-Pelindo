@@ -13,7 +13,8 @@ namespace XamarinAppSample
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new AlertTabbedPage();
         }
 
         protected override void OnStart()

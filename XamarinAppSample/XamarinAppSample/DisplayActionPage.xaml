@@ -4,9 +4,6 @@
              x:Class="XamarinAppSample.DisplayActionPage">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                
-            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

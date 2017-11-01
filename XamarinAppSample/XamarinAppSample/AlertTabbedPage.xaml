@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppSample.AlertTabbedPage" 
+            xmlns:pages="clr-namespace:XamarinAppSample;assembly=XamarinAppSample">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Action Sheet" Icon="ic_account_box_white_24dp.png">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtLanguage" WidthRequest="200" />
+                <Button x:Name="btnShowAction" Text="Show Action" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <pages:ListBerita Title="List Berita" Icon="ic_account_box_white_24dp.png" />
+    <pages:CustomListPage Title="Detail Pegawai" Icon="ic_account_box_white_24dp.png" />
+</TabbedPage>
