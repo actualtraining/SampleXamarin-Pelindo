@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppSample.DetailPegawai" Title="Detail Pegawai">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding Pic}" WidthRequest="200" StyleClass="Rounded" />
+            <Label Text="Nip :" FontSize="Medium" />
+            <Entry Text="{Binding Nip}" />
+            <Label Text="Nama :" FontSize="Medium" />
+            <Entry Text="{Binding Nama}" />
+            <Label Text="Email :" FontSize="Medium" />
+            <Entry Text="{Binding Email}" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnEdit" Text="Edit" StyleClass="Warning" />
+                <Button x:Name="btnDelete" Text="Delete" StyleClass="Danger" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

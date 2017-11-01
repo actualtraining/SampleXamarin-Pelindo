@@ -47,6 +47,12 @@
     <Compile Include="DaftarPegawaiPage.xaml.cs">
       <DependentUpon>DaftarPegawaiPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DetailPegawai.xaml.cs">
+      <DependentUpon>DetailPegawai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayActionPage.xaml.cs">
+      <DependentUpon>DisplayActionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListBerita.xaml.cs">
       <DependentUpon>ListBerita.xaml</DependentUpon>
     </Compile>
@@ -139,6 +145,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CustomListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DetailPegawai.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DisplayActionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

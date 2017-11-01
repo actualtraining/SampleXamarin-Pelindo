@@ -39,7 +39,24 @@ namespace XamarinAppSample
             switcher.Toggled += Switcher_Toggled;
 
             btnPegawai.Clicked += BtnPegawai_Clicked;
+
+            menuPegawai.Clicked += (object sender, EventArgs e) =>
+            {
+                Navigation.PushAsync(new CustomListPage());
+            };
+
+            menuBerita.Clicked += (object sender, EventArgs e) =>
+             {
+                 Navigation.PushAsync(new ListBerita());
+             };
+
+            menuLogin.Clicked += (object sender, EventArgs e) =>
+             {
+                 Navigation.PushModalAsync(new SampleDataBinding());
+             };
         }
+
+       
 
         private void BtnPegawai_Clicked(object sender, EventArgs e)
         {
@@ -75,5 +92,7 @@ namespace XamarinAppSample
         {
             DisplayAlert("Hello", "Hello World", "OK");
         }
+
+      
     }
 }
