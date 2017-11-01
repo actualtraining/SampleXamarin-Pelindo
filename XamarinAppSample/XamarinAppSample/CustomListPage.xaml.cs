@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinAppSample.ViewModel;
 
 namespace XamarinAppSample
 {
@@ -15,6 +16,8 @@ namespace XamarinAppSample
         public CustomListPage()
         {
             InitializeComponent();
+
+            BindingContext = new DataPegawaiViewModel();
         }
     }
 }

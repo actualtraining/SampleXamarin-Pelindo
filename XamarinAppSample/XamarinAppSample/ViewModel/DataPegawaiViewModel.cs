@@ -27,6 +27,5 @@ namespace XamarinAppSample.ViewModel
                 new Pegawai {Nip="776655",Nama="Claire Riedfield",Email="claire@umbrella.com",Pic="photo3.png"}
             };
         }
-
     }
 }

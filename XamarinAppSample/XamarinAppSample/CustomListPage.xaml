@@ -3,28 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinAppSample.CustomListPage">
     <ContentPage.Content>
-        <ListView>
+        <ListView ItemsSource="{Binding ListPegawai}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
 
-                            <Image Source="{Binding Pic}" WidthRequest="150" Grid.Column="0" Grid.Row="0"
+                                <Image Source="{Binding Pic}" WidthRequest="100" Grid.Column="0" Grid.Row="0"
                                    VerticalOptions="Center" HorizontalOptions="Center" />
-                            <Label Text="{Binding Nip}" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"
+                                <Label Text="{Binding Nip}" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"
                                    VerticalOptions="Center" HorizontalOptions="Center" />
-                            <Label Text="{Binding Nama}" FontSize="Medium"
+                                <Label Text="{Binding Nama}" FontSize="Medium"
                                    Grid.Column="1" Grid.Row="0"/>
-                            <Label Text="{Binding Email}" Grid.Column="1" Grid.Row="1" />
-                        </Grid>
+                                <StackLayout Grid.Column="1" Grid.Row="1" HorizontalOptions="Start">
+                                    <Label Text="{Binding Email}" />
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
