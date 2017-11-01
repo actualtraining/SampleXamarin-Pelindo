@@ -13,7 +13,7 @@ namespace XamarinAppSample
         {
             InitializeComponent();
 
-            MainPage = new ListBerita();
+            MainPage = new DaftarPegawaiPage();
         }
 
         protected override void OnStart()

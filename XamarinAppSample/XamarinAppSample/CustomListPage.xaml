@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppSample.CustomListPage">
+    <ContentPage.Content>
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding Pic}" WidthRequest="150" Grid.Column="0" Grid.Row="0"
+                                   VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Text="{Binding Nip}" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"
+                                   VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label Text="{Binding Nama}" FontSize="Medium"
+                                   Grid.Column="1" Grid.Row="0"/>
+                            <Label Text="{Binding Email}" Grid.Column="1" Grid.Row="1" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

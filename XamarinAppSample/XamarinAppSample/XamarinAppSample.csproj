@@ -41,6 +41,9 @@
     <Compile Include="ContohSimpleList.xaml.cs">
       <DependentUpon>ContohSimpleList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomListPage.xaml.cs">
+      <DependentUpon>CustomListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DaftarPegawaiPage.xaml.cs">
       <DependentUpon>DaftarPegawaiPage.xaml</DependentUpon>
     </Compile>
@@ -53,9 +56,13 @@
     <Compile Include="Models\Berita.cs" />
     <Compile Include="Models\Pegawai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleDataBinding.xaml.cs">
+      <DependentUpon>SampleDataBinding.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SampleGridLayout.xaml.cs">
       <DependentUpon>SampleGridLayout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\DataPegawaiViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -101,6 +108,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DaftarPegawaiPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SampleDataBinding.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
