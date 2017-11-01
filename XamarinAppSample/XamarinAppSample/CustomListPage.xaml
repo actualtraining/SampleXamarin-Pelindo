@@ -1,47 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinAppSample.CustomListPage">
+             x:Class="XamarinAppSample.CustomListPage" Title="Daftar Pegawai">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding ListPegawai}" HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.ContextActions>
-                            <MenuItem Text="Edit" Command="{Binding EditCommand}" />
-                            <MenuItem Text="Delete" Command="{Binding DeleteCommand}" />
-                        </ViewCell.ContextActions>
-                        <StackLayout>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
+        <StackLayout>
+            <ListView ItemsSource="{Binding ListPegawai}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Edit" Command="{Binding EditCommand}" />
+                                <MenuItem Text="Delete" Command="{Binding DeleteCommand}" />
+                            </ViewCell.ContextActions>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
 
-                                <Image Source="{Binding Pic}" WidthRequest="80" StyleClass="Circle" Grid.Column="0" Grid.Row="0"
+                                    <Image Source="{Binding Pic}" WidthRequest="80" StyleClass="Circle" Grid.Column="0" Grid.Row="0"
                                    VerticalOptions="Center" HorizontalOptions="Center" />
-                                <Label Text="{Binding Nip}" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"
+                                    <Label Text="{Binding Nip}" FontAttributes="Bold" Grid.Column="0" Grid.Row="1"
                                    VerticalOptions="Center" HorizontalOptions="Center" />
-                                <StackLayout Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
+                                    <StackLayout Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
                                              HorizontalOptions="Start">
-                                    <Label Text="{Binding Nama,StringFormat='Nama : {0}'}" FontSize="Medium" />
-                                    <Label Text="{Binding Email}" />
-                                    <StackLayout Orientation="Horizontal">
-                                        <Button Text="Edit" FontSize="Micro" StyleClass="Warning" HeightRequest="35" 
+                                        <Label Text="{Binding Nama,StringFormat='Nama : {0}'}" FontSize="Medium" />
+                                        <Label Text="{Binding Email}" />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Button Text="Edit" FontSize="Micro" StyleClass="Warning" HeightRequest="35" 
                                                 MinimumWidthRequest="60" Command="{Binding EditCommand}" />
-                                        <Button Text="Delete" FontSize="Micro" StyleClass="Danger" HeightRequest="35" 
+                                            <Button Text="Delete" FontSize="Micro" StyleClass="Danger" HeightRequest="35" 
                                                 MinimumWidthRequest="60" Command="{Binding DeleteCommand}" />
+                                        </StackLayout>
                                     </StackLayout>
-                                </StackLayout>
-                            </Grid>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnListBerita" Text="List Berita" StyleClass="Primary" />
+            </StackLayout>
+        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

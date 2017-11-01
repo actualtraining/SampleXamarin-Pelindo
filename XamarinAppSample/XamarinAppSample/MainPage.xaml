@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinAppSample"
-             x:Class="XamarinAppSample.MainPage">
+             x:Class="XamarinAppSample.MainPage" Title="Main Page">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <Label x:Name="eventValue" Text="Label" />
@@ -19,6 +19,7 @@
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="btnHello" Text="Hello" Clicked="btnHello_Clicked" StyleClass="Success" />
                 <Button x:Name="btnAdd" Text="Add" StyleClass="Warning" />
+                <Button x:Name="btnPegawai" Text="Daftar Pegawai" StyleClass="Primary" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

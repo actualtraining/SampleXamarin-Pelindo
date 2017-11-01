@@ -37,6 +37,13 @@ namespace XamarinAppSample
             stepper.ValueChanged += Stepper_ValueChanged;
 
             switcher.Toggled += Switcher_Toggled;
+
+            btnPegawai.Clicked += BtnPegawai_Clicked;
+        }
+
+        private void BtnPegawai_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CustomListPage());
         }
 
         private void Switcher_Toggled(object sender, ToggledEventArgs e)
