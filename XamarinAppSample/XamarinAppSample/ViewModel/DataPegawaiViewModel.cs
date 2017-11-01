@@ -12,7 +12,7 @@ namespace XamarinAppSample.ViewModel
 {
     public class DataPegawaiViewModel : BindableObject
     {
-        private ObservableCollection<Pegawai> listPegawai;      
+        private ObservableCollection<Pegawai> listPegawai;
         public ObservableCollection<Pegawai> ListPegawai
         {
             get { return listPegawai; }
@@ -30,10 +30,10 @@ namespace XamarinAppSample.ViewModel
             ListPegawai = new ObservableCollection<Pegawai>(listData);
 
             MessagingCenter.Subscribe<Pegawai>(this, "EditRequested", (sender) =>
-            {
-                var data = (Pegawai)sender;
-                data.Nama = data.Nama + " - Edited";
-            });
+                        {
+                            var data = (Pegawai)sender;
+                            data.Nama = data.Nama + " - Edited";
+                        });
 
             MessagingCenter.Subscribe<Pegawai>(this, "DeleteRequested", (sender) =>
             {

@@ -7,6 +7,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Edit" Command="{Binding EditCommand}" />
+                            <MenuItem Text="Delete" Command="{Binding DeleteCommand}" />
+                        </ViewCell.ContextActions>
                         <StackLayout>
                             <Grid>
                                 <Grid.RowDefinitions>
