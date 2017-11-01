@@ -17,8 +17,8 @@
             
             <Switch x:Name="switcher" />
             <StackLayout Orientation="Horizontal">
-                <Button x:Name="btnHello" Text="Hello" Clicked="btnHello_Clicked" />
-                <Button x:Name="btnAdd" Text="Add" />
+                <Button x:Name="btnHello" Text="Hello" Clicked="btnHello_Clicked" StyleClass="Success" />
+                <Button x:Name="btnAdd" Text="Add" StyleClass="Warning" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

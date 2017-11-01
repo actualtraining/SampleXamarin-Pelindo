@@ -4,7 +4,7 @@
              x:Class="XamarinAppSample.SampleDataBinding">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="ROTATION"
+             <Label Text="ROTATION"
                BindingContext="{x:Reference Name=slider}"
                Rotation="{Binding Path=Value}"
                FontAttributes="Bold"
@@ -12,12 +12,12 @@
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand" />
 
-            <Slider x:Name="slider"
+        <Slider x:Name="slider"
                 Maximum="360"
                 VerticalOptions="CenterAndExpand" />
 
-            <Label BindingContext="{x:Reference slider}"
-               Text="{Binding Value}"
+        <Label BindingContext="{x:Reference slider}"
+               Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
                FontAttributes="Bold"
                FontSize="Large"
                HorizontalOptions="Center"
