@@ -36,5 +36,36 @@ namespace XamarinAppSample.Models
             get { return _pic; }
             set { _pic = value; OnPropertyChanged("Pic"); }
         }
+
+        private Command _editCommand;
+        public Command EditCommand
+        {
+            get { return _editCommand; }
+            set { _editCommand = value; OnPropertyChanged("EditCommand"); }
+        }
+
+        private Command _deleteCommand;
+        public Command DeleteCommand
+        {
+            get { return _deleteCommand; }
+            set { _deleteCommand = value; OnPropertyChanged("DeleteCommand"); }
+        }
+
+        public Pegawai()
+        {
+            EditCommand = new Command(EditRequested);
+            DeleteCommand = new Command(DeleteRequested);
+        }
+
+        void DeleteRequested()
+        {
+            MessagingCenter.Send<Pegawai>(this, "DeleteRequested");
+        }
+
+        void EditRequested()
+        {
+            MessagingCenter.Send<Pegawai>(this, "EditRequested");
+            
+        }
     }
 }

@@ -27,8 +27,10 @@
                                     <Label Text="{Binding Nama,StringFormat='Nama : {0}'}" FontSize="Medium" />
                                     <Label Text="{Binding Email}" />
                                     <StackLayout Orientation="Horizontal">
-                                        <Button Text="Edit" FontSize="Micro" StyleClass="Warning" HeightRequest="35" MinimumWidthRequest="60" />
-                                        <Button Text="Delete" FontSize="Micro" StyleClass="Danger" HeightRequest="35" MinimumWidthRequest="60" />
+                                        <Button Text="Edit" FontSize="Micro" StyleClass="Warning" HeightRequest="35" 
+                                                MinimumWidthRequest="60" Command="{Binding EditCommand}" />
+                                        <Button Text="Delete" FontSize="Micro" StyleClass="Danger" HeightRequest="35" 
+                                                MinimumWidthRequest="60" Command="{Binding DeleteCommand}" />
                                     </StackLayout>
                                 </StackLayout>
                             </Grid>
