@@ -65,7 +65,6 @@ namespace XamarinAppSample.Models
         void EditRequested()
         {
             MessagingCenter.Send<Pegawai>(this, "EditRequested");
-            
         }
     }
 }
