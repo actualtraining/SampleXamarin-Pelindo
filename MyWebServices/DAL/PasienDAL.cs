@@ -39,6 +39,68 @@ namespace MyWebServices.DAL
             }
         }
 
+        public void Insert(Pasien pasien)
+        {
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                string strSql = @"insert into Pasien(Nama,Alamat,Telpon,Umur) 
+                                  values(@Nama,@Alamat,@Telpon,@Umur)";
+                try
+                {
+                    var param = new { Nama = pasien.Nama, Alamat = pasien.Alamat,
+                        Telpon = pasien.Telpon, Umur = pasien.Umur };
+                    conn.Execute(strSql,param);
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
 
+        public void Update(Pasien pasien)
+        {
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                string strSql = @"update Pasien set Nama=@Nama,Alamat=@Alamat,Telpon=@Telpon,Umur=@Umur 
+                                  where PasienID=@PasienID";
+                try
+                {
+                    var param = new
+                    {
+                        Nama = pasien.Nama,
+                        Alamat = pasien.Alamat,
+                        Telpon = pasien.Telpon,
+                        Umur = pasien.Umur,
+                        PasienID = pasien.PasienID
+                    };
+                    conn.Execute(strSql, param);
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
+
+        public void Delete(string id)
+        {
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                string strSql = @"delete from Pasien where PasienID=@PasienID";
+                try
+                {
+                    var param = new
+                    {
+                        PasienID = id
+                    };
+                    conn.Execute(strSql, param);
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
     }
 }

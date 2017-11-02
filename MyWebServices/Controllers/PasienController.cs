@@ -29,8 +29,9 @@ namespace MyWebServices.Controllers
         }
 
         // POST: api/Pasien
-        public void Post([FromBody]string value)
+        public void Post(Pasien pasien)
         {
+
         }
 
         // PUT: api/Pasien/5
