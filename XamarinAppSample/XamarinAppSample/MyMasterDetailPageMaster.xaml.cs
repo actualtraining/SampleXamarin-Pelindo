@@ -23,6 +23,8 @@ namespace XamarinAppSample
 
             BindingContext = new MyMasterDetailPageMasterViewModel();
             ListView = MenuItemsListView;
+
+            txtHeader.Text = "Welcome "+Application.Current.Properties["username"].ToString();
         }
 
         class MyMasterDetailPageMasterViewModel : INotifyPropertyChanged
@@ -33,7 +35,7 @@ namespace XamarinAppSample
             {
                 MenuItems = new ObservableCollection<MyMasterDetailPageMenuItem>(new[]
                 {
-                    new MyMasterDetailPageMenuItem { Id = 0, Title = "Main Page", TargetType=typeof(MainPage) },
+                    new MyMasterDetailPageMenuItem { Id = 0, Title = "Main Page", TargetType=typeof(MainPage),Icon="icon.png" },
                     new MyMasterDetailPageMenuItem { Id = 1, Title = "Daftar Pegawai", TargetType=typeof(CustomListPage) },
                     new MyMasterDetailPageMenuItem { Id = 2, Title = "List Berita",TargetType=typeof(ListBerita) },
                     new MyMasterDetailPageMenuItem { Id = 3, Title = "Kirim Pesan", TargetType=typeof(KirimDataPage) },
