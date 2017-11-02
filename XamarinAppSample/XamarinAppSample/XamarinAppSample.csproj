@@ -67,6 +67,16 @@
     </Compile>
     <Compile Include="Models\Berita.cs" />
     <Compile Include="Models\Pegawai.cs" />
+    <Compile Include="MyMasterDetailPage.xaml.cs">
+      <DependentUpon>MyMasterDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMasterDetailPageDetail.xaml.cs">
+      <DependentUpon>MyMasterDetailPageDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMasterDetailPageMaster.xaml.cs">
+      <DependentUpon>MyMasterDetailPageMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMasterDetailPageMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleDataBinding.xaml.cs">
       <DependentUpon>SampleDataBinding.xaml</DependentUpon>
@@ -184,6 +194,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TerimaDataPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyMasterDetailPageMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyMasterDetailPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -17,7 +17,7 @@ namespace XamarinAppSample
             
                 //Application.Current.Properties["username"] = "anonymous";
 
-            MainPage = new AlertTabbedPage();
+            MainPage = new MyMasterDetailPage();
             //MainPage = new NavigationPage(new MainPage());
             //MainPage = new NavigationPage(new KirimDataPage());
         }
