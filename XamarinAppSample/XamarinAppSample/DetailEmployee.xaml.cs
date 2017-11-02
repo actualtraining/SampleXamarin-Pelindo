@@ -35,9 +35,26 @@ namespace XamarinAppSample
             }
         }
 
-        private void btnDelete_Clicked(object sender, EventArgs e)
+        private async void btnDelete_Clicked(object sender, EventArgs e)
         {
-            
+            var answer = await DisplayAlert("Konfirmasi", "Apakah anda yakin untuk delete data ini?", "Yes", "No");
+            if (answer)
+            {
+                Employee currEmployee = (Employee)this.BindingContext;
+                try
+                {
+                    dataAccess.Delete(currEmployee);
+                    await Navigation.PopModalAsync();
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Kesalahan", "Error : " + ex.Message, "OK");
+                }
+            }
+            else
+            {
+                await Navigation.PopModalAsync();
+            }
         }
     }
 }

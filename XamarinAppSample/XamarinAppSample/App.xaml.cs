@@ -15,7 +15,7 @@ namespace XamarinAppSample
 
             //global
             
-                //Application.Current.Properties["username"] = "anonymous";
+            Application.Current.Properties["username"] = "anonymous";
 
             MainPage = new MyMasterDetailPage();
             //MainPage = new NavigationPage(new MainPage());
