@@ -22,9 +22,10 @@ namespace MyWebServices.Controllers
         }
 
         // GET: api/Pasien/5
-        public string Get(int id)
+        public Pasien Get(string id)
         {
-            return "value";
+            var result = pasienDal.GetById(id);
+            return result;
         }
 
         // POST: api/Pasien

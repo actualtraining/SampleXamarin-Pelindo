@@ -18,7 +18,6 @@ namespace MyWebServices.DAL
             strConn = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
         }
 
-
         //select 
         public IEnumerable<Pasien> GetAll()
         {
@@ -29,5 +28,17 @@ namespace MyWebServices.DAL
                 return results;
             }
         }
+
+        public Pasien GetById(string id)
+        {
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                string strSql = @"select * from Pasien where PasienID=@PasienID";
+                var result = conn.QuerySingleOrDefault<Pasien>(strSql, new { PasienID = id });
+                return result;
+            }
+        }
+
+
     }
 }
