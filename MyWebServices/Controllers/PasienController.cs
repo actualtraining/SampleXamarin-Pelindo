@@ -29,19 +29,45 @@ namespace MyWebServices.Controllers
         }
 
         // POST: api/Pasien
-        public void Post(Pasien pasien)
+        public IHttpActionResult Post(Pasien pasien)
         {
-
+            try
+            {
+                pasienDal.Insert(pasien);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // PUT: api/Pasien/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(Pasien pasien)
         {
+            try
+            {
+                pasienDal.Update(pasien);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         // DELETE: api/Pasien/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(string id)
         {
+            try
+            {
+                pasienDal.Delete(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }
