@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinAppSample.DaftarEmployeePage" Title="Daftar Employee">
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="menuTambah" Order="Primary" 
+        <ToolbarItem x:Name="menuTambah" Order="Primary" Icon="ic_add_circle_white_24dp.png"
                      Text="Insert Employee" Clicked="menuTambah_Clicked"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
