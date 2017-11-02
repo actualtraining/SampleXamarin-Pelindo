@@ -33,11 +33,11 @@ namespace XamarinAppSample
             {
                 MenuItems = new ObservableCollection<MyMasterDetailPageMenuItem>(new[]
                 {
-                    new MyMasterDetailPageMenuItem { Id = 0, Title = "Page 1" },
-                    new MyMasterDetailPageMenuItem { Id = 1, Title = "Page 2" },
-                    new MyMasterDetailPageMenuItem { Id = 2, Title = "Page 3" },
-                    new MyMasterDetailPageMenuItem { Id = 3, Title = "Page 4" },
-                    new MyMasterDetailPageMenuItem { Id = 4, Title = "Page 5" },
+                    new MyMasterDetailPageMenuItem { Id = 0, Title = "Main Page", TargetType=typeof(MainPage) },
+                    new MyMasterDetailPageMenuItem { Id = 1, Title = "Daftar Pegawai", TargetType=typeof(CustomListPage) },
+                    new MyMasterDetailPageMenuItem { Id = 2, Title = "List Berita",TargetType=typeof(ListBerita) },
+                    new MyMasterDetailPageMenuItem { Id = 3, Title = "Kirim Pesan", TargetType=typeof(KirimDataPage) },
+                    new MyMasterDetailPageMenuItem { Id = 4, Title = "Sample Binding",TargetType=typeof(SampleDataBinding) },
                 });
             }
 
