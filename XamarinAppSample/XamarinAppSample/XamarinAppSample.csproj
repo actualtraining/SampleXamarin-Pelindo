@@ -50,6 +50,9 @@
     <Compile Include="DaftarEmployeePage.xaml.cs">
       <DependentUpon>DaftarEmployeePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DaftarPasien.xaml.cs">
+      <DependentUpon>DaftarPasien.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DaftarPegawaiPage.xaml.cs">
       <DependentUpon>DaftarPegawaiPage.xaml</DependentUpon>
     </Compile>
@@ -259,6 +262,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DetailEmployee.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DaftarPasien.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

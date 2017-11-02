@@ -38,7 +38,7 @@ namespace XamarinAppSample
                     new MyMasterDetailPageMenuItem { Id = 0, Title = "Main Page", TargetType=typeof(MainPage),Icon="icon.png" },
                     new MyMasterDetailPageMenuItem { Id = 1, Title = "Daftar Pegawai", TargetType=typeof(DaftarEmployeePage) },
                     new MyMasterDetailPageMenuItem { Id = 2, Title = "List Berita",TargetType=typeof(ListBerita) },
-                    new MyMasterDetailPageMenuItem { Id = 3, Title = "Kirim Pesan", TargetType=typeof(KirimDataPage) },
+                    new MyMasterDetailPageMenuItem { Id = 3, Title = "Daftar Pasien", TargetType=typeof(DaftarPasien) },
                     new MyMasterDetailPageMenuItem { Id = 4, Title = "Sample Binding",TargetType=typeof(SampleDataBinding) },
                 });
             }
