@@ -32,8 +32,6 @@ namespace XamarinAppSample
             ((ListView)sender).SelectedItem = null;
 
             Navigation.PushModalAsync(detailPage);
-
-
         }
 
         protected override void OnAppearing()
