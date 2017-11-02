@@ -18,6 +18,8 @@ namespace MyWebServices.DAL
             strConn = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
         }
 
+
+        //select 
         public IEnumerable<Pasien> GetAll()
         {
             using(SqlConnection conn = new SqlConnection(strConn))
