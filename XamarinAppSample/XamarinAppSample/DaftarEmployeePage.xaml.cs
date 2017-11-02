@@ -26,5 +26,10 @@ namespace XamarinAppSample
             var data = dataAccess.GetAll();
             myListView.ItemsSource = data;
         }
+
+        private void menuTambah_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

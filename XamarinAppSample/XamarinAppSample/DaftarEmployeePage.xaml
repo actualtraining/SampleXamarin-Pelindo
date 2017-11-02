@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinAppSample.DaftarEmployeePage">
+             x:Class="XamarinAppSample.DaftarEmployeePage" Title="Daftar Employee">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuTambah" Order="Primary" 
+                     Text="Insert Employee" Clicked="menuTambah_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ListView x:Name="myListView">
             <ListView.ItemTemplate>
