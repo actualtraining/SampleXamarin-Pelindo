@@ -54,6 +54,9 @@
       <DependentUpon>DaftarPegawaiPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\DataAccess.cs" />
+    <Compile Include="DetailEmployee.xaml.cs">
+      <DependentUpon>DetailEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DetailPegawai.xaml.cs">
       <DependentUpon>DetailPegawai.xaml</DependentUpon>
     </Compile>
@@ -236,6 +239,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="InsertEmployeePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DetailEmployee.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -19,6 +19,21 @@ namespace XamarinAppSample
         {
             InitializeComponent();
             dataAccess = new DataAccess();
+
+            myListView.ItemTapped += MyListView_ItemTapped;
+        }
+
+        private void MyListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var data = (Employee)e.Item;
+            DetailEmployee detailPage = new DetailEmployee();
+            detailPage.BindingContext = data;
+
+            ((ListView)sender).SelectedItem = null;
+
+            Navigation.PushModalAsync(detailPage);
+
+
         }
 
         protected override void OnAppearing()
