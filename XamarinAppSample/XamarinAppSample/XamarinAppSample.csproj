@@ -50,6 +50,7 @@
     <Compile Include="DaftarPegawaiPage.xaml.cs">
       <DependentUpon>DaftarPegawaiPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Data\DataAccess.cs" />
     <Compile Include="DetailPegawai.xaml.cs">
       <DependentUpon>DetailPegawai.xaml</DependentUpon>
     </Compile>
@@ -67,6 +68,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Berita.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Pegawai.cs" />
     <Compile Include="MyMasterDetailPage.xaml.cs">
       <DependentUpon>MyMasterDetailPage.xaml</DependentUpon>
@@ -220,6 +222,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
