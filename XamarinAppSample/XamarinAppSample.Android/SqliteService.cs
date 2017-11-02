@@ -12,6 +12,10 @@ using Android.Widget;
 using SQLite.Net;
 using System.IO;
 
+using XamarinAppSample.Droid;
+using Xamarin.Forms;
+
+[assembly:Dependency(typeof(SqliteService))]
 namespace XamarinAppSample.Droid
 {
     public class SqliteService : ISQLIte
