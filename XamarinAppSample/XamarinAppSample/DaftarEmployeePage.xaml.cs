@@ -29,7 +29,7 @@ namespace XamarinAppSample
 
         private void menuTambah_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new InsertEmployeePage());
         }
     }
 }
