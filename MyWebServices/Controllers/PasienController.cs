@@ -5,34 +5,39 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
+using MyWebServices.DAL;
+using MyWebServices.Models;
+
 namespace MyWebServices.Controllers
 {
-    public class ValuesController : ApiController
+    public class PasienController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        private PasienDAL pasienDal = new PasienDAL();
+
+        // GET: api/Pasien
+        public IEnumerable<Pasien> Get()
         {
-            return new string[] { "value1", "value2" };
+            var results = pasienDal.GetAll();
+            return results;
         }
 
-        // GET api/values/5
+        // GET: api/Pasien/5
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST: api/Pasien
         public void Post([FromBody]string value)
         {
-
         }
 
-        // PUT api/values/5
+        // PUT: api/Pasien/5
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
+        // DELETE: api/Pasien/5
         public void Delete(int id)
         {
         }
