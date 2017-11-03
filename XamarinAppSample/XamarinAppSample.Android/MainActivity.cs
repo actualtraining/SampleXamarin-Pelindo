@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace XamarinAppSample.Droid
 {
-    [Activity(Label = "XamarinAppSample", Icon = "@drawable/icon", Theme = "@style/MainTheme", 
+    [Activity(Label = "XamarinAppSample", Icon = "@drawable/icon", Theme = "@style/splashscreen", 
         MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
