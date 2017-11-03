@@ -24,6 +24,31 @@ namespace MyWebServices.DAL
             using(SqlConnection conn = new SqlConnection(strConn))
             {
                 string strSql = @"select * from Pasien order by Nama asc";
+                /*SqlCommand cmd = new SqlCommand(strSql, conn);
+                conn.Open();
+                List<Pasien> listPasien = new List<Pasien>();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        var newPasien = new Pasien
+                        {
+                            PasienID = Convert.ToInt32(dr["PasienID"]),
+                            Nama = dr["Nama"].ToString(),
+                            Alamat = dr["Alamat"].ToString(),
+                            Telpon = dr["Telpon"].ToString(),
+                            Umur = Convert.ToInt32(dr["Umur"].ToString())
+                        };
+                        listPasien.Add(newPasien);
+                    }
+                }
+                dr.Close();
+                cmd.Dispose();
+                conn.Close();
+
+                return listPasien;*/
+
                 var results = conn.Query<Pasien>(strSql);
                 return results;
             }
