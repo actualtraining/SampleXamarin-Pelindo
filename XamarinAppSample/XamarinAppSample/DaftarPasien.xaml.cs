@@ -26,6 +26,19 @@ namespace XamarinAppSample
         {
             var data = await pasienService.GetAll();
             myListPasien.ItemsSource = data;
+            myIndicator.IsRunning = false;
+            myIndicator.IsVisible = false;
+        }
+
+        private void menuTambah_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new TambahPasien());
+        }
+
+        private void myListPasien_Refreshing(object sender, EventArgs e)
+        {
+            OnAppearing();
+            myListPasien.IsRefreshing = false;
         }
     }
 }

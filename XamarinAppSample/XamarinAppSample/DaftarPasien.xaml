@@ -2,13 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinAppSample.DaftarPasien" Title="Daftar Pasien">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuTambah" Order="Primary" Icon="ic_add_circle_white_24dp.png" 
+                     Clicked="menuTambah_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="myListPasien">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Nama}" Detail="{Binding Alamat}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <StackLayout>
+            <ActivityIndicator x:Name="myIndicator" Color="Blue" IsRunning="True" HorizontalOptions="Center" />
+            <ListView x:Name="myListPasien" IsPullToRefreshEnabled="True" Refreshing="myListPasien_Refreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nama}" Detail="{Binding Alamat}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
