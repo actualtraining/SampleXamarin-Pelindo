@@ -60,5 +60,7 @@ namespace XamarinAppSample.Services
                 throw new Exception("Error : update data gagal " + response.StatusCode);
             }
         }
+
+
     }
 }
