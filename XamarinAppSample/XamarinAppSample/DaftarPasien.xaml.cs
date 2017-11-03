@@ -20,6 +20,17 @@ namespace XamarinAppSample
         {
             InitializeComponent();
             pasienService = new PasienService();
+
+            myListPasien.ItemTapped += MyListPasien_ItemTapped;
+        }
+
+        private async void MyListPasien_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var currPasien = (Pasien)e.Item;
+            EditPasien editPasien = new EditPasien();
+            editPasien.BindingContext = currPasien;
+            await Navigation.PushModalAsync(editPasien);
+            ((ListView)sender).SelectedItem = null;
         }
 
         protected async override void OnAppearing()

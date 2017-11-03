@@ -47,5 +47,18 @@ namespace XamarinAppSample.Services
                 throw new Exception("Error : Tambah data gagal " + response.StatusCode);
             }
         }
+
+        public async Task Update(Pasien pasien)
+        {
+            var strUri = MyHelper.ApiUrl + "api/Pasien";
+            var editItem = JsonConvert.SerializeObject(pasien);
+            var content = new StringContent(editItem, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = null;
+            response = await _client.PutAsync(strUri, content);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Error : update data gagal " + response.StatusCode);
+            }
+        }
     }
 }

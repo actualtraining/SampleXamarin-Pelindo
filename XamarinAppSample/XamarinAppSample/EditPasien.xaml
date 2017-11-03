@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAppSample.EditPasien" Title="Edit Pasien">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Masukan Nama Pasien :" FontSize="Medium" />
+            <Entry Text="{Binding Nama}" />
+            <Label Text="Masukan  Alamat :" FontSize="Medium" />
+            <Entry Text="{Binding Alamat}" />
+            <Label Text="Masukan Telpon :" FontSize="Medium" />
+            <Entry Text="{Binding Telpon}" />
+            <Label Text="Masukan Umur :" FontSize="Medium" />
+            <Entry Text="{Binding Umur}" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnEdit" Text="Edit" StyleClass="Warning" Clicked="btnEdit_Clicked" />
+                <Button x:Name="btnDelete" Text="Delete" StyleClass="Danger" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
