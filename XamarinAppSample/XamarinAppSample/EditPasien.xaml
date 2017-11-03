@@ -14,7 +14,7 @@
             <Entry Text="{Binding Umur}" />
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="btnEdit" Text="Edit" StyleClass="Warning" Clicked="btnEdit_Clicked" />
-                <Button x:Name="btnDelete" Text="Delete" StyleClass="Danger" />
+                <Button x:Name="btnDelete" Text="Delete" StyleClass="Danger" Clicked="btnDelete_Clicked" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -61,6 +61,15 @@ namespace XamarinAppSample.Services
             }
         }
 
-
+        public async Task Delete(string id)
+        {
+            var strUri = MyHelper.ApiUrl + "api/Pasien/" + id;
+            HttpResponseMessage response = null;
+            response = await _client.DeleteAsync(strUri);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Error : delete data gagal " + response.StatusCode);
+            }
+        }
     }
 }

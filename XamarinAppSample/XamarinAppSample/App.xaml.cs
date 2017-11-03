@@ -9,7 +9,7 @@ namespace XamarinAppSample
 {
     public partial class App : Application
     {
-        /* Link setting IOS https://1drv.ms/w/s!AsrTz6LxdXjU3WgEXVWkSpocHS94*/
+        /* Link setting IOS https://1drv.ms/w/s!AsrTz6LxdXjU3WgEXVWkSpocHS94 */
         public App()
         {
             InitializeComponent();

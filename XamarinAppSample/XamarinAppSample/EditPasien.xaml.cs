@@ -34,5 +34,16 @@ namespace XamarinAppSample
                 await DisplayAlert("Kesalahan", "Ditemukan kesalahan : " + ex.Message, "OK");
             }
         }
+
+        private async void btnDelete_Clicked(object sender, EventArgs e)
+        {
+            var currPasien = (Pasien)this.BindingContext;
+            var hasil = await DisplayAlert("Konfirmasi", "Apakah data benar akan didelete?", "Yes", "No");
+            if (hasil)
+            {
+                await pasienService.Delete(currPasien.PasienID.ToString());
+                await Navigation.PopModalAsync();
+            }
+        }
     }
 }
