@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using MyWebServices.Models;
+using BO;
 using System.Data.SqlClient;
 using Dapper;
 using System.Configuration;
 
-namespace MyWebServices.DAL
+namespace DAL
 {
     public class PasienDAL
     {

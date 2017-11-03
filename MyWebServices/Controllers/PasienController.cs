@@ -5,8 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-using MyWebServices.DAL;
-using MyWebServices.Models;
+using BO;
+using DAL;
 
 namespace MyWebServices.Controllers
 {
