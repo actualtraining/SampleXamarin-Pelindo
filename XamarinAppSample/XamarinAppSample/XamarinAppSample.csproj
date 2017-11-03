@@ -66,6 +66,7 @@
     <Compile Include="DisplayActionPage.xaml.cs">
       <DependentUpon>DisplayActionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\MyHelper.cs" />
     <Compile Include="InsertEmployeePage.xaml.cs">
       <DependentUpon>InsertEmployeePage.xaml</DependentUpon>
     </Compile>

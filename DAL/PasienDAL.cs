@@ -50,6 +50,9 @@ namespace DAL
                 return listPasien;*/
 
                 var results = conn.Query<Pasien>(strSql);
+
+                //var queryresult = from p in results where p.Nama.Contains("erick") select p;
+
                 return results;
             }
         }

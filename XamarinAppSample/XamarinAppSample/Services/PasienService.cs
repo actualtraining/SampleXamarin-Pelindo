@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using XamarinAppSample.Models;
+using XamarinAppSample.Helper;
 
 namespace XamarinAppSample.Services
 {
@@ -20,7 +21,7 @@ namespace XamarinAppSample.Services
 
         public async Task<List<Pasien>> GetAll()
         {
-            var strUri = "http://pelindo3.azurewebsites.net/api/Pasien";
+            var strUri = MyHelper.ApiUrl + "api/Pasien";
             var response = await _client.GetAsync(strUri);
             if (response.IsSuccessStatusCode)
             {
@@ -31,6 +32,19 @@ namespace XamarinAppSample.Services
             else
             {
                 throw new Exception(response.StatusCode.ToString());
+            }
+        }
+
+        public async Task Insert(Pasien pasien)
+        {
+            var strUri = MyHelper.ApiUrl + "api/Pasien";
+            var newItem = JsonConvert.SerializeObject(pasien);
+            var content = new StringContent(newItem, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = null;
+            response = await _client.PostAsync(strUri, content);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Error : Tambah data gagal " + response.StatusCode);
             }
         }
     }
